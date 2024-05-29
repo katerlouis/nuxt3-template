@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   css: ['@/styles/reset.css'],
-  
+
   modules: [
     [
       'nuxt-lodash', {
@@ -17,6 +17,16 @@ export default defineNuxtConfig({
     ],
     '@vueuse/nuxt',
     '@pinia/nuxt',
+    [
+      '@nuxt/eslint', {
+        config: {
+          stylistic: {
+            semi: false,
+            quotes: 'single',
+          },
+        },
+      },
+    ],
   ],
 
   imports: {
@@ -33,4 +43,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})
